@@ -181,6 +181,11 @@ aggregate_profiles <- function(x, ...,
 
   # standard partial profiles
   # just average
+
+  print(class(all_profiles))
+  print(rownames(all_profiles))
+  print(colnames(all_profiles))
+  print(dims(all_profiles))
   if (type == "partial") {
     aggregated_profiles <- aggregated_profiles_partial(all_profiles, groups)
     class(aggregated_profiles) <- c("aggregated_profiles_explainer",
